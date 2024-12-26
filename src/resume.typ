@@ -166,9 +166,21 @@
   dates: "",
   company: "",
   location: "",
+  homepage: "",
+  github: "",
 ) = {
+  let homepage = if homepage != "" {
+    " " + link("https://" + homepage)[#fa-icon("home")]
+  } else {
+    ""
+  }
+  let github = if github != "" {
+    " " + link("https://" + github)[#fa-icon("github")]
+  } else {
+    ""
+  }
   generic-two-by-two(
-    top-left: strong(title),
+    top-left: strong(title) + homepage + github,
     top-right: dates,
     bottom-left: company,
     bottom-right: emph(location),
@@ -180,6 +192,7 @@
   name: "",
   url: "",
   dates: "",
+  github: "",
 ) = {
   generic-one-by-two(
     left: {
@@ -187,6 +200,9 @@
         [*#name* #if url != "" and dates != "" [ (#link("https://" + url)[#url])]]
       } else {
         [*#role*, #name #if url != "" and dates != ""  [ (#link("https://" + url)[#url])]]
+      }
+      if github != "" {
+        " " + link("https://github.com/" + github)[#fa-icon("github")]
       }
     },
     right: {

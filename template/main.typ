@@ -56,6 +56,8 @@
   location: "Atomville, CA",
   company: "Microscopic Circus, Schrodinger's University",
   dates: dates-helper(start-date: "May 2024", end-date: "Present"),
+  homepage: "microscopic-circus.schrodinger.edu",
+  github: "github.com/schrodinger-microscopic-circus",
 )
 - Played God with tiny molecules, making them dance to uncover the secrets of the universe
 - Convinced high-performance computers to work overtime without unions, reducing simulation time by 50%
@@ -101,6 +103,8 @@
   dates: dates-helper(start-date: "Nov 2023", end-date: "Present"),
   // URL is also optional
   url: "hyperschedule.io",
+  // GitHub is also optional
+  github: "hyperschedule",
 )
 - Maintain open-source scheduler used by 7000+ users at the Claremont Consortium with TypeScript, React and MongoDB
   - Manage PR reviews, bug fixes, and coordinate with college for releasing scheduling data and over \$1500 of yearly funding
