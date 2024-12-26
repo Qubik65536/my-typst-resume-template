@@ -175,7 +175,7 @@
     ""
   }
   let github = if github != "" {
-    " " + link("https://" + github)[#fa-icon("github")]
+    " " + link("https://github.com/" + github)[#fa-icon("github")]
   } else {
     ""
   }

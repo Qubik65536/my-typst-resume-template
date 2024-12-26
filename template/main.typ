@@ -58,7 +58,7 @@
   company: "Microscopic Circus, Schrodinger's University",
   dates: dates-helper(start-date: "May 2024", end-date: "Present"),
   homepage: "microscopic-circus.schrodinger.edu",
-  github: "github.com/schrodinger-microscopic-circus",
+  github: "schrodinger-microscopic-circus",
 )
 - Played God with tiny molecules, making them dance to uncover the secrets of the universe
 - Convinced high-performance computers to work overtime without unions, reducing simulation time by 50%
