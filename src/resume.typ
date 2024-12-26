@@ -98,8 +98,8 @@
       #linebreak()
       #{
         let items = (
-          contact-item(github, icon: fa-icon("github"), link-type: "https://"),
-          contact-item(linkedin, icon: fa-icon("linkedin"), link-type: "https://"),
+          contact-item(github, icon: fa-icon("github"), link-type: "https://github.com/"),
+          contact-item(linkedin, icon: fa-icon("linkedin"), link-type: "https://linkedin.com/"),
           contact-item(personal-site, icon: fa-icon("globe"), link-type: "https://"),
           contact-item(orcid, prefix: [#orcid-icon(color: rgb("#AECD54"))orcid.org/], link-type: "https://orcid.org/"),
         )

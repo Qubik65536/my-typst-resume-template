@@ -4,8 +4,8 @@
 #let name = "Stephen Xu"
 #let location = "San Diego, CA"
 #let email = "stxu@hmc.edu"
-#let github = "github.com/stuxf"
-#let linkedin = "linkedin.com/in/stuxf"
+#let github = "stuxf"
+#let linkedin = "in/stuxf"
 #let phone = "+1 (xxx) xxx-xxxx"
 #let personal-site = "stuxf.dev"
 
