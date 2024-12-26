@@ -2,6 +2,9 @@
 
 <div align="center">Version 0.2.2</div>
 
+> [!IMPORTANT]
+> In order to use this modified version of the resume template, you will need to have the Font Awesome Desktop fonts (otf) installed on your machine to render the icons added in the customized version of the resume template.
+
 This is a template for a simple resume. It is intended to be used as a good starting point for quickly crafting a standard resume that will properly be parsed by ATS systems. Inspiration is taken from [Jake's Resume](https://github.com/jakegut/resume) and [guided-resume-starter-cgc](https://typst.app/universe/package/guided-resume-starter-cgc/). I'm currently a college student and was unable to find a Typst resume template that fit my needs, so I wrote my own. I hope this template can be useful to others as well.
 
 ## Sample Resume
