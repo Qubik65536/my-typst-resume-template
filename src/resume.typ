@@ -161,7 +161,7 @@
   )
 }
 
-#let work(
+#let experience(
   title: "",
   dates: "",
   company: "",

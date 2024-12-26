@@ -49,9 +49,9 @@
 - Cumulative GPA: 4.0\/4.0 | Dean's List, Harvey S. Mudd Merit Scholarship, National Merit Scholarship
 - Relevant Coursework: Data Structures, Program Development, Microprocessors, Abstract Algebra I: Groups and Rings, Linear Algebra, Discrete Mathematics, Multivariable & Single Variable Calculus, Principles and Practice of Comp Sci
 
-== Work Experience
+== Experience
 
-#work(
+#experience(
   title: "Subatomic Shepherd and Caffeine Connoisseur",
   location: "Atomville, CA",
   company: "Microscopic Circus, Schrodinger's University",
@@ -61,7 +61,7 @@
 - Convinced high-performance computers to work overtime without unions, reducing simulation time by 50%
 - Wowed a room full of nerds with pretty pictures of invisible things and imaginary findings
 
-#work(
+#experience(
   title: "AI Wrangler and Code Ninja",
   location: "Silicon Mirage, CA",
   company: "Organic Stupidity Startup",
@@ -71,7 +71,7 @@
 - Developed HIPAA-compliant digital signatures, because doctors' handwriting wasn't illegible enough already
 - Turned spaghetti code into a gourmet dish, making other interns drool with envy
 
-#work(
+#experience(
   title: "Digital Playground Architect",
   location: "The Cloud",
   company: "Pixels & Profit Interactive",
@@ -82,7 +82,7 @@
 - Automated support responses, reducing human interaction to a level that would make introverts proud
 - Built a documentation site that actually got read, breaking the ancient RTFM curse
 
-#work(
+#experience(
   title: "Code Conjurer Intern",
   location: "Silicon Suburb, CA",
   company: "Bits & Bytes Consulting",
