@@ -55,6 +55,10 @@
     fill: rgb(accent-color),
   )
 
+  let accented-fa-icon(icon) = {
+    fa-icon(icon, fill: rgb(accent-color))
+  }
+
   // Name will be aligned left, bold and big
   show heading.where(level: 1): it => [
     #set align(left)
@@ -89,18 +93,18 @@
       #{
         let items = (
           contact-item(pronouns),
-          contact-item(phone, icon: fa-icon("phone-intercom")),
-          contact-item(location, icon: fa-icon("map-location")),
-          contact-item(email, icon: fa-icon("envelope-open-text"), link-type: "mailto:"),
+          contact-item(phone, icon: accented-fa-icon("phone-intercom")),
+          contact-item(location, icon: accented-fa-icon("map-location")),
+          contact-item(email, icon: accented-fa-icon("envelope-open-text"), link-type: "mailto:"),
         )
         items.filter(x => x != none).join("  |  ")
       }
       #linebreak()
       #{
         let items = (
-          contact-item(github, icon: fa-icon("github"), link-type: "https://github.com/"),
-          contact-item(linkedin, icon: fa-icon("linkedin"), link-type: "https://linkedin.com/"),
-          contact-item(personal-site, icon: fa-icon("globe"), link-type: "https://"),
+          contact-item(github, icon: accented-fa-icon("github"), link-type: "https://github.com/"),
+          contact-item(linkedin, icon: accented-fa-icon("linkedin"), link-type: "https://linkedin.com/"),
+          contact-item(personal-site, icon: accented-fa-icon("globe"), link-type: "https://"),
           contact-item(orcid, prefix: [#orcid-icon(color: rgb("#AECD54"))orcid.org/], link-type: "https://orcid.org/"),
         )
         items.filter(x => x != none).join("  |  ")
