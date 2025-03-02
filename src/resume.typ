@@ -234,7 +234,7 @@
   ]
 }
 
-#let extracurriculars(
+#let volunteering(
   activity: "",
   dates: "",
 ) = {
