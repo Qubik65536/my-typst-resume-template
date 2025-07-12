@@ -96,12 +96,12 @@
           contact-item(phone, icon: accented-fa-icon("phone-intercom")),
           contact-item(location, icon: accented-fa-icon("map-location")),
           contact-item(email, icon: accented-fa-icon("envelope-open-text"), link-type: "mailto:"),
-        )
-        items.filter(x => x != none).join("  |  ")
-      }
-      #linebreak()
-      #{
-        let items = (
+        // )
+        // items.filter(x => x != none).join("  |  ")
+      // }
+      // #linebreak()
+      // #{
+        // let items = (
           contact-item(github, icon: accented-fa-icon("github"), link-type: "https://github.com/"),
           contact-item(linkedin, icon: accented-fa-icon("linkedin"), link-type: "https://linkedin.com/"),
           contact-item(personal-site, icon: accented-fa-icon("globe"), link-type: "https://"),
