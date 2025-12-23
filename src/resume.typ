@@ -16,7 +16,6 @@
   paper: "us-letter",
   body,
 ) = {
-
   // Sets document metadata
   set document(author: author, title: author)
 
@@ -27,12 +26,12 @@
     size: 10pt,
     lang: "en",
     // Disable ligatures so ATS systems do not get confused when parsing fonts.
-    ligatures: false
+    ligatures: false,
   )
 
   // Reccomended to have 0.5in margin on all sides
   set page(
-    margin: (0.5in),
+    margin: 0.5in,
     paper: paper,
   )
 
@@ -96,12 +95,12 @@
           contact-item(phone, icon: accented-fa-icon("phone-intercom")),
           contact-item(location, icon: accented-fa-icon("map-location")),
           contact-item(email, icon: accented-fa-icon("envelope-open-text"), link-type: "mailto:"),
-        // )
-        // items.filter(x => x != none).join("  |  ")
-      // }
-      // #linebreak()
-      // #{
-        // let items = (
+          // )
+          // items.filter(x => x != none).join("  |  ")
+          // }
+          // #linebreak()
+          // #{
+          // let items = (
           contact-item(github, icon: accented-fa-icon("github"), link-type: "https://github.com/"),
           contact-item(linkedin, icon: accented-fa-icon("linkedin"), link-type: "https://linkedin.com/"),
           contact-item(personal-site, icon: accented-fa-icon("globe"), link-type: "https://"),
@@ -194,6 +193,7 @@
 #let project(
   role: "",
   name: "",
+  skills: "",
   url: "",
   dates: "",
   github: "",
@@ -201,9 +201,17 @@
   generic-one-by-two(
     left: {
       if role == "" {
-        [*#name* #if url != "" and dates != "" [ (#link("https://" + url)[#url])]]
+        if skills == "" {
+          [*#name* #if url != "" and dates != "" [ (#link("https://" + url)[#url])]]
+        } else {
+          [*#name* - _#skills _ #if url != "" and dates != "" [ (#link("https://" + url)[#url])]]
+        }
       } else {
-        [*#role*, #name #if url != "" and dates != ""  [ (#link("https://" + url)[#url])]]
+        if skills == "" {
+          [*#role*, #name #if url != "" and dates != "" [ (#link("https://" + url)[#url])]]
+        } else {
+          [*#role*, #name - _#skills _ #if url != "" and dates != "" [ (#link("https://" + url)[#url])]]
+        }
       }
       if github != "" {
         " " + link("https://github.com/" + github)[#fa-icon("github")]
