@@ -1,6 +1,6 @@
 # Basic Resume
 
-<div align="center">Version 0.2.2</div>
+<div align="center">Version 0.2.9</div>
 
 > [!IMPORTANT]
 > In order to use this modified version of the resume template, you will need to have the Font Awesome Desktop fonts (otf) installed on your machine to render the icons added in the customized version of the resume template.
@@ -16,7 +16,7 @@ This is a template for a simple resume. It is intended to be used as a good star
 A barebones resume looks like this, which you can use to get started.
 
 ```typst
-#import "@preview/basic-resume:0.2.2": *
+#import "@preview/basic-resume:0.2.9": *
 
 // Put your personal information here, replacing mine
 #let name = "Stephen Xu"
@@ -41,6 +41,8 @@ A barebones resume looks like this, which you can use to get started.
   accent-color: "#26428b",
   font: "New Computer Modern",
   paper: "us-letter",
+  author-position: left,
+  personal-info-position: left,
 )
 
 /*

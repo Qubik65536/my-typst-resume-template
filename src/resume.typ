@@ -1,8 +1,11 @@
 #import "@preview/fontawesome:0.5.0": *
 #import "@preview/scienceicons:0.0.6": orcid-icon
+#import "@preview/scienceicons:0.1.0": orcid-icon
 
 #let resume(
   author: "",
+  author-position: left,
+  personal-info-position: left,
   pronouns: "",
   location: "",
   email: "",
@@ -14,6 +17,9 @@
   accent-color: "#000000",
   font: "New Computer Modern",
   paper: "us-letter",
+  author-font-size: 20pt,
+  font-size: 10pt,
+  lang: "en",
   body,
 ) = {
   // Sets document metadata
@@ -23,8 +29,8 @@
   set text(
     // LaTeX style font
     font: font,
-    size: 10pt,
-    lang: "en",
+    size: font-size,
+    lang: lang,
     // Disable ligatures so ATS systems do not get confused when parsing fonts.
     ligatures: false,
   )
@@ -60,16 +66,16 @@
 
   // Name will be aligned left, bold and big
   show heading.where(level: 1): it => [
-    #set align(left)
+    #set align(author-position)
     #set text(
       weight: 700,
-      size: 20pt,
+      size: author-font-size,
     )
     #pad(it.body)
   ]
 
   // Level 1 Heading
-  [= #align(center)[#(author)]]
+  [= #(author)]
 
   // Personal Info Helper
   let contact-item(value, icon: none, prefix: "", link-type: "") = {
@@ -88,7 +94,7 @@
   // Personal Info
   pad(
     top: 0.25em,
-    align(center)[
+    align(personal-info-position)[
       #{
         let items = (
           contact-item(pronouns),
@@ -155,13 +161,26 @@
   degree: "",
   gpa: "",
   location: "",
+  // Makes dates on upper right like rest of components
+  consistent: false,
 ) = {
-  generic-two-by-two(
-    top-left: strong(institution),
-    top-right: location,
-    bottom-left: emph(degree),
-    bottom-right: emph(dates),
-  )
+  if consistent {
+    // edu-constant style (dates top-right, location bottom-right)
+    generic-two-by-two(
+      top-left: strong(institution),
+      top-right: dates,
+      bottom-left: emph(degree),
+      bottom-right: emph(location),
+    )
+  } else {
+    // original edu style (location top-right, dates bottom-right)
+    generic-two-by-two(
+      top-left: strong(institution),
+      top-right: location,
+      bottom-left: emph(degree),
+      bottom-right: emph(dates),
+    )
+  }
 }
 
 #let experience(
@@ -242,7 +261,7 @@
   ]
 }
 
-#let volunteering(
+#let extracurriculars(
   activity: "",
   dates: "",
 ) = {
